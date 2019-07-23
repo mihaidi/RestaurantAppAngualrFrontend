@@ -1,0 +1,29 @@
+.w3-tangerine {
+    font-family: "Tangerine", serif;
+    font-size: 50px;
+    color: white;
+  }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.fill-space{
+    flex: 1 1 auto;
+}
+
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+#mat-toolbar{
+    background:#001221;
+}
+
+.navBarPosition{
+    position: static;
+}

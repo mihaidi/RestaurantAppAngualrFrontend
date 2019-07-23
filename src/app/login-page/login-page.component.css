@@ -1,0 +1,22 @@
+form {
+    padding: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  control-messages{
+    color: #E82C0C;
+    margin: 6px 0;
+    font-size: 16px;
+  }
+
+  input{
+    width: 300px;
+    font-family: Times New Roman;
+    font-size: 16px;
+  }
+
+  label{
+    font-family:Geneva;
+    font-size: 18px;
+  }

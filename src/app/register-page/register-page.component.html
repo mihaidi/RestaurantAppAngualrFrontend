@@ -1,0 +1,61 @@
+<div class="container">
+
+  <div>
+    <div class="error">{{error}}</div>
+  </div>
+  
+  <form registerForm="ngForm" [formGroup]="registerForm" (ngSubmit)="registerUser()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="firstName">First Name</label>
+        <input type="text" formControlName="firstName" id="firstName" class="form-control" />
+        <control-messages [control]="registerForm.controls.firstName"></control-messages>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="lastName">Last Name</label>
+        <input type="text" formControlName="lastName" id="lastName" class="form-control" />
+        <control-messages [control]="registerForm.controls.lastName"></control-messages>
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="username">User Name</label>
+        <input type="text" formControlName="username" id="username" class="form-control" />
+        <control-messages [control]="registerForm.controls.username"></control-messages>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" id="password" class="form-control" />
+        <control-messages [control]="registerForm.controls.password"></control-messages>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="email">Email</label>
+        <input type="text" formControlName="email" id="email" class="form-control" />
+        <control-messages [control]="registerForm.controls.email"></control-messages>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="number" formControlName="phoneNumber" id="phoneNumber" class="form-control" />
+        <control-messages [control]="registerForm.controls.phoneNumber"></control-messages>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <button type="submit" [disabled]="!registerForm.valid" class="btn btn-success">Register</button>
+      </div>
+      <div class="form-group col-md-6">
+        <button type="button" class="btn btn-danger" (click)="resetForm()">Reset</button>
+      </div>
+    </div>
+
+
+  </form>
+</div>

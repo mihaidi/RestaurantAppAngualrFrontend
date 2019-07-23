@@ -1,0 +1,50 @@
+<div class="navBarPosition">
+  <mat-toolbar id="mat-toolbar" class="w3-container w3-tangerine">
+    <a class="w3-xxxxlarge" [routerLink]="['']" routerLinkActive="router-link-active">Name</a>
+
+    <span class="fill-space "></span>
+    <button mat-raised-button [routerLink]="['menu']" routerLinkActive="router-link-active">
+      <mat-icon aria-hidden="false">restaurant_menu</mat-icon>
+      Menu
+    </button>
+
+
+
+    <div class="divider"></div>
+
+    <button mat-raised-button *ngIf="isLoged == true" [routerLink]="['/profile']" routerLinkActive="router-link-active">
+      <mat-icon aria-hidden="false">perm_identity</mat-icon>
+      User Profile
+    </button>
+
+    <div class="divider"></div>
+
+    <button mat-raised-button *ngIf="isLogedInLocal !== 'true'">
+      <mat-icon aria-hidden="false">info</mat-icon>
+      About us
+    </button>
+
+    <div class="divider" *ngIf="isLogedInLocal !== 'true'"></div>
+
+    <button mat-raised-button [routerLink]="['register']" routerLinkActive="router-link-active"
+      *ngIf="isLogedInLocal !== 'true'">
+      <mat-icon aria-hidden="false">perm_identity</mat-icon>
+      Register
+    </button>
+
+    <div class="divider" *ngIf="isLogedInLocal !== 'true'"></div>
+    <button mat-raised-button [routerLink]="['login']" routerLinkActive="router-link-active"
+      *ngIf="isLogedInLocal !== 'true'">
+      <mat-icon aria-hidden="false">exit_to_app</mat-icon>
+      Log In
+    </button>
+
+    <div class="divider" *ngIf="isLoged"></div>
+    <button mat-raised-button *ngIf="isLogedInLocal === 'true'" (click)="logOut()">
+      <mat-icon aria-hidden="false">vpn_key</mat-icon>
+      Log Out
+    </button>
+
+
+  </mat-toolbar>
+</div>

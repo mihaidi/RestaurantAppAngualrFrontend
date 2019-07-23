@@ -1,0 +1,28 @@
+<div class="container">
+
+
+  <form logInForm="ngForm" [formGroup]="logInForm" (ngSubmit)="logIn()">
+
+    <div class="form-row">
+      <label for="username">Username</label>
+      <input type="text" formControlName="username" id="username" class="form-control">
+      <control-messages [control]="logInForm.controls.username"></control-messages>
+    </div>
+
+    <div class="form-row">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" id="password" class="form-control">
+      <control-messages [control]="logInForm.controls.password"></control-messages>
+    </div>
+
+
+    <div class="from-row">
+      <button type="submit" [disabled]="!logInForm.valid" class="btn btn-primary">Log In</button>
+    </div>
+
+  </form>
+
+
+
+
+</div>

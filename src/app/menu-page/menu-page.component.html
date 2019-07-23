@@ -1,0 +1,29 @@
+<div class="container">
+
+
+    <div class="menuTitle">
+        <label>Menu</label>
+    </div>
+
+    <br>
+
+    <div *ngFor="let data of menuResponse" class="oneMenu">
+        <br />
+        <div class="menuPhoto">
+
+            <img src="/assets/img/1-2-food-free-png-image-thumb.png">
+        </div>
+
+        
+        <label class="menuName">{{data.name}}</label>
+        <div class="menuDescription form-row">
+            <div *ngFor="let food of data.foods" class="foodNames foodPrice form-group col-md-3+">
+                <label>{{food.name}}:</label>
+                <label>{{food.price}} lei</label>
+            </div>
+        </div>
+        <button class="btn btn-primary orderButton">Order</button>
+
+    </div>
+
+</div>

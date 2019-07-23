@@ -1,0 +1,105 @@
+<div class="container">
+  <br>
+  <div class="userProfile">
+    <div class="userPhoto">
+      <div>
+        <img src="{{imageUrl}}" height="200" width="200" />
+      </div>
+      <form [formGroup]="uploadForm" (ngSubmit)="photoSubmit()">
+        <input type="file" accept="image/*" id="file" name="photo" (change)="handleFileSelect($event)" />
+
+        <div *ngIf="isFileStored">
+          <br>
+          <button type="submit">Upload</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="userData">
+
+      <form [formGroup]="form">
+
+
+        <div class="form-row">
+
+          <div class="form-group col-md-4">
+            <label>First Name</label>
+            <input type="text" formControlName="firstName" [attr.disabled]="isEnabled ? '': null"
+              class="form-control" />
+            <div *ngIf="form.controls.firstName.errors?.required && form.controls.firstName.touched" class="error">
+              *Required
+            </div>
+          </div>
+
+
+          <div class="form-group col-md-4">
+            <label>Last Name</label>
+            <input type="text" formControlName="lastName" [attr.disabled]="isEnabled ? '': null" class="form-control" />
+            <div *ngIf="form.controls.lastName.errors?.required && form.controls.lastName.touched" class="error">
+              *Required
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-row">
+
+          <div class="form-group col-md-4">
+            <label>User Name</label>
+            <input type="text" class="form-control" formControlName="username" [attr.disabled]="isEnabled ? '': null" />
+            <div *ngIf="form.controls.username.errors?.required && form.controls.username.touched" class="error">
+              *Required
+            </div>
+          </div>
+
+
+          <div class="form-group col-md-4">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password" [attr.disabled]="isEnabled ? '': null" />
+            <div *ngIf="form.controls.password.errors?.required && form.controls.password.touched" class="error">
+              *Required
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="form-row">
+
+          <div class="form-group col-md-4">
+            <label>Email</label>
+            <input type="text" formControlName="email" [attr.disabled]="isEnabled ? '': null" class="form-control" />
+            <div *ngIf="form.controls.email.errors?.required && form.controls.email.touched" class="error">
+              *Required
+            </div>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label class="phoneNumber">Phone Number</label>
+            <input type="text" formControlName="phoneNumber" [attr.disabled]="isEnabled ? '': null"
+              class="form-control" />
+            <div *ngIf="form.controls.phoneNumber.errors?.required && form.controls.phoneNumber.touched" class="error">
+              *Required
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-froup col-md-4">
+            <button (click)="editUserData()" routerLinkActive="router-link-active" class="btn btn-primary">Save</button>
+          </div>
+          <div class="form-froup col-md-4">
+            <button (click)="enableEdit()" class="btn btn-primary">Edit</button>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+
+
+</div>

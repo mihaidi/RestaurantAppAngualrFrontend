@@ -1,0 +1,33 @@
+<div>
+
+  <div class="image">
+    <div class="imageText">
+      Best food you ever taste
+    </div>
+  </div>
+
+  <br />
+
+  <div>
+    <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
+      <mat-grid-tile *ngFor="let data of LogoData">
+        <div class="container">
+
+          <div class="logo">
+            <img src={{data.imageUrl}} class="logo">
+          </div>
+
+          <div class="logo-title">
+            {{data.imageTitle}}
+          </div>
+          <br />
+          <div class="logo-desc">
+            {{data.imageDescription}}
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+</div>

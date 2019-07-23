@@ -1,0 +1,108 @@
+.menuTitle{
+    text-align: center;
+    font-family:  Georgia,serif;
+    font-size: 36px;
+    font-weight: 800
+}
+
+
+.menuPhoto{
+    /* border-color: green;
+    border-style: solid;
+    border-width: 2px; */
+    width: 200px;
+    height: 200px;
+    display: inline-block; 
+    top:-200px;
+
+}
+
+.menuDescription{
+
+    /* position: relative; */
+    /* left: 453px; */
+
+
+    /* border-color: yellow;
+    border-style: solid;
+    border-width: 2px; */
+    width: 250px;
+    height: 100%;
+    display: inline-block;
+    /* height: 150px; */
+    margin: 0 auto;
+    right: 0;
+    position: absolute;
+}
+
+.menuName{
+    /* border-color: pink;
+    border-style: solid;
+    border-width: 2px; */
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    
+    position: absolute;
+    /* right:500px; */
+    display:inline-block;
+    right: 50%;
+    text-align: center;
+}
+
+.foodNames{
+    /* border-color: black;
+    border-style: solid;
+    border-width: 2px; */
+    height: auto;
+    /* text-align: center; */
+    font-size: 16px;
+}
+
+.foodPrice{
+    /* border-color: blue;
+    border-style: solid;
+    border-width: 2px; */
+    height: auto;
+    font-size: 14px;
+}
+
+.oneMenu{
+    /* border-color: red;
+    border-style: solid;
+    border-width: 5px; */
+    position: relative;
+    width: 100%;
+    /*height: 300px; */
+    /* overflow:auto; */
+
+   min-height: 300px;
+   max-height: 400px;
+    /* width: auto; */
+    background-color: #eceef1;
+    border-bottom: 5px solid white;
+
+}
+
+.orderButton{
+    /* border-color: violet;
+    border-style: solid;
+    border-width: 5px; */
+    /* float: right; */
+    position: absolute;
+    left:10px;
+    bottom:10px;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #001221 !important;
+}
+
+.space{
+    height: 10px;
+    width: 100%;
+
+     border-color: violet;
+    border-style: solid;
+    border-width: 5px;
+}
